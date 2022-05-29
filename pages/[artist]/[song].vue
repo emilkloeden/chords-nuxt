@@ -21,6 +21,11 @@ const { data } = await useFetch(url)
     <NuxtLayout name="artist">
         <h3 style="color: red;">{{ tabAuthor }}</h3>
         <h1 class="headingXl">{{ data.title }}</h1>
+        <MetaData 
+            :tabAuthor="data.tabAuthor"
+            :tabAuthorUrl="data.tabAuthorUrl"
+            :originalUrl="data.originalUrl"
+            :capoFret="data.capoFret" />
         <Song :content="data.content" />
         <!-- <NuxtLink class="lightText" :to="'/' + data.artist">{{ data.artist }}</NuxtLink> -->
     </NuxtLayout>
