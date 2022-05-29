@@ -1,3 +1,30 @@
+<script setup>
+useMeta({
+    title: 'Chords - Nuxt!'
+})
+const config = useRuntimeConfig()
+const { data } = await useFetch(`${config.apiUrl}/getAllSongs`)
+</script>
+
+
+<template>
+    <header class="header">
+        <LogoImage />
+        <h1 class="heading2Xl">
+            Chords - Nuxt!
+        </h1>
+    </header>
+    <app-description />
+    <section class="headingMd padding1px">
+        <h2 class="headingLg">Chords</h2>
+        <ul class="list">
+            <li class="listItem" v-for="song in data.allSongsData">
+                <NuxtLink :to="song.path">{{ song.artist }} - {{ song.title }}</NuxtLink>
+            </li>
+        </ul>
+    </section>
+</template>
+
 <style>
 .header {
     display: flex;
@@ -32,29 +59,3 @@
     line-height: 1.5;
 }
 </style>
-
-<script setup>
-useMeta({
-    title: 'Chords - Nuxt!'
-})
-const { data } = await useFetch(`${process.env.API_URL}/getAllSongs`)
-</script>
-
-
-<template>
-    <header class="header">
-        <LogoImage />
-        <h1 class="heading2Xl">
-            Chords - Nuxt!
-        </h1>
-    </header>
-    <app-description />
-    <section class="headingMd padding1px">
-        <h2 class="headingLg">Chords</h2>
-        <ul class="list">
-            <li class="listItem" v-for="song in data.allSongsData">
-                <NuxtLink :to="song.path">{{ song.artist }} - {{ song.title }}</NuxtLink>
-            </li>
-        </ul>
-    </section>
-</template>

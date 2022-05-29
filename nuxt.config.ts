@@ -4,15 +4,18 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
     typescript: {
         shim: false
+    },
+    publicRuntimeConfig: {
+      apiUrl: process.env.API_URL
+    },
+    buildModules: [
+      '@nuxtjs/google-fonts'
+    ],
+    googleFonts: {
+      families: {
+        Inconsolata: true,
+        'Space+Mono': true
       },
-      buildModules: [
-        '@nuxtjs/google-fonts'
-      ],
-      googleFonts: {
-        families: {
-          Inconsolata: true,
-          'Space+Mono': true
-        },
-        display: 'optional'
-      }
+      display: 'optional'
+    }
 })

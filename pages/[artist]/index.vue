@@ -7,9 +7,9 @@ const { artist } = route.params
 useMeta({
     title: `Chords - Nuxt - ${artist}`
 })
-
+const config = useRuntimeConfig()
 let url = new URL(
-    `${process.env.API_URL}/getSongsByArtist`
+    `${config.apiUrl}/getSongsByArtist`
 );
 url.search = new URLSearchParams({
     artist

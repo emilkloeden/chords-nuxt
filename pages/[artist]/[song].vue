@@ -7,8 +7,8 @@ const { artist, song: title } = route.params
 useHead({
     title: `Chords - Nuxt - ${artist} - ${title}`
 })
-
-let url = new URL(`${process.env.API_URL}/getSong`);
+const config = useRuntimeConfig()
+let url = new URL(`${config.apiUrl}/getSong`);
 url.search = new URLSearchParams({
     artist,
     title
