@@ -1,42 +1,18 @@
-# Nuxt 3 Minimal Starter
+# Chords - Nuxt
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+A portfolio project displaying guitar chords with finger-positions on-hover. Part of my Chords project - building the same site in different frameworks/with different tools.
 
-## Setup
+<img src="screenshot.png" alt="Screenshot" title="Screenshot of Chords - Svelte main page" width="200px" style="border: 1px solid grey">
 
-Make sure to install the dependencies:
+This edition is built using [Vue](https://vuejs.org/) and [Nuxt3](https://v3.nuxtjs.org/) web framework.
 
-```bash
-# yarn
-yarn install
+Making use of:
 
-# npm
-npm install
+- VueJS Single File Components
+- A lightweight frontend with pages hydrated with data from serverless functions deployed to Netlify (as part of the [Chords - Svelte](https://github.com/emilkloeden/chords-svelte/) build).
+- A scoped npm package to parse chord data from files [@emilkloeden/chordify](https://www.npmjs.com/package/@emilkloeden/chordify)
+- Deployed to Vercel
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+## See it in action
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+Visit [Chords - Nuxt](https://chords-nuxt.vercel.app/) on Vercel.
