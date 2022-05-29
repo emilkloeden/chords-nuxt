@@ -11,7 +11,6 @@
     "nuxt": "3.0.0-rc.3"
   },
   "dependencies": {
-    "@emilkloeden/chordify": "^1.2.0",
-    "vercel": "^24.2.4"
+    "@emilkloeden/chordify": "^1.2.0"
   }
 }
